@@ -27,9 +27,14 @@
 // **NOTE:** This file is a snapshot of the WebSocket++ utility client tutorial.
 // Additional related material can be found in the tutorials/utility_client
 // directory of the WebSocket++ repository.
+#include <websocketpp/config/asio_no_tls_client.hpp>
+#include <websocketpp/client.hpp>
 
 #include <iostream>
 #include <string>
+
+
+typedef websocketpp::client<websocketpp::config::asio_client> client;
 
 int main() {
     bool done = false;
