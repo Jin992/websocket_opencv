@@ -1,38 +1,66 @@
-//#include <opencv2/core/mat.hpp>
-#include <cstdlib>
 #include <iostream>
-#include <map>
 #include <string>
 #include <sstream>
 #include <client_src/websocket_endpoint.h>
 #include <opencv2/opencv.hpp>
 #include <opencv2/highgui/highgui.hpp>
-//#include <libavcodec/avcodec.h>
-//#include <libswscale/swscale.h>
-//#include <libavformat/avformat.h>
+#include <cstdlib>
+
+#define DEBUG true
+
+#define FRAME_HEIGHT 480
+#define FRAME_WIDTH 640
+#define ENCODE_QUALITY 80
 
 
-//void ffmpegToCV(const AVFrame &av_frame, cv::Mat &cv_frame) {
-//    cv_frame = cv::Mat(av_frame.height, av_frame.width, CV_8UC3, av_frame.data[0], av_frame.linesize[0]);
-//}
+namespace {
+    void print_capture_device_details(cv::VideoCapture &cap) {
+        std::cout << "Capture device info:" << std::endl;
+        std::cout << "Status: " << cap.isOpened() <<std::endl;
+        std::cout << "Frame width: " << cap.get(cv::CAP_PROP_FRAME_WIDTH) <<std::endl;
+        std::cout << "Frame height: " << cap.get(cv::CAP_PROP_FRAME_HEIGHT) <<std::endl;
+        std::cout << "FPS:" << cap.get(cv::CAP_PROP_FPS) <<std::endl;
+    }
 
+}
+
+/*
+ *  argv[1] - capture device id(name, something like "/dev/video0 or 0")
+ *  argv[2] - server address and port example ws://localhost:9002
+ *  argv[3] - capture framerate (camera fps)
+ *
+ */
 int main(int argc, char **argv) {
 
-    if (argc != 3){
+    if (argc != 4){
         std::cout << "Wrong arguments quantity" << std::endl;
         return 1;
     }
-    std::string input;
-    websocket_endpoint endpoint;
 
+    websocket_endpoint  endpoint;
+    std::vector <uchar> encoded;
+    int jpegqual = ENCODE_QUALITY;
     cv::VideoCapture cap(argv[1]);
-    cap.set(CV_CAP_PROP_FOURCC, CV_FOURCC('H', '2', '6', '4'));
+
+    cap.set(CV_CAP_PROP_FPS, std::strtol(argv[3], nullptr, 10));
 
     if (!cap.isOpened()) {
         std::cout << "Can't open video device." << std::endl;
         return 1;
     }
+    if (DEBUG) {
+        // Print capture device properties
+        print_capture_device_details(cap);
 
+        char answer = 'y';
+        std::cout << "Continue? [y/n]";
+        std::cin >> answer;
+        if (answer == 'n') {
+            return 1;
+        }
+    }
+
+    // Connect to server
     int id = endpoint.connect(argv[2]);
     if (id != -1) {
         std::cout << "> Created connection with id " << id << std::endl;
@@ -42,107 +70,38 @@ int main(int argc, char **argv) {
     }
 
     while (true) {
-       cv::Mat frame = cv::Mat::zeros(480, 640, CV_8UC3);
-       std::vector<uchar> array;
+        cv::Mat send, frame = cv::Mat::zeros(480, 640, CV_8UC3);
+        std::vector<int> compression_params;
+        std::vector<uchar> array;
 
-       cap >> frame;
-       if (frame.empty()) {
-           std::cout << "Frame is empty skipping it..." << std::endl;
-           continue;
-       }
-       if (frame.isContinuous()) {
-           array.assign((uchar*)frame.datastart, (uchar*)frame.dataend);
-       } else {
-           for (int i = 0; i < frame.rows; ++i) {
-               array.insert(array.end(), frame.ptr<uchar>(i), frame.ptr<uchar>(i)+frame.cols);
-           }
-       }
-       std::cout << "mat size: " << frame.rows * frame.cols << std::endl;
-       std::cout << "mat channels: " << frame.channels() << std::endl;
-       std::cout << "vector size: " << array.size() << std::endl;
+        // Capture frame
+        cap >> frame;
+        // Check for not valid frames
+        if (frame.empty()) {
+            std::cout << "Frame is empty skipping it..." << std::endl;
+            continue;
+        }
 
-       std::string frame_str(array.begin(), array.end());
-       endpoint.send((void*)frame_str.data(), frame_str.size());
-       std::cout << "sended " << frame.total() * frame.elemSize() << " bytes to server." << std::endl;
+        // resize initial frame
+        cv::resize(frame, send, cv::Size(FRAME_WIDTH, FRAME_HEIGHT), 0, 0, cv::INTER_LINEAR);
+        // add compression flags to vector
+        compression_params.push_back(CV_IMWRITE_JPEG_QUALITY);
+        compression_params.push_back(jpegqual);
+
+        // Compress cv::Mat with .jpg codec and store it to std::vector<uchar>
+        imencode(".jpg", send, encoded, compression_params);
+        // Store std::vector<uchar> to std::string
+        std::string frame_str2(encoded.begin(), encoded.end());
+
+        // Send frame to server
+        endpoint.send((void *) frame_str2.data(), frame_str2.size());
+
+        // Some debug info
+        if (DEBUG) {
+            std::cout << "mat size: " << frame.rows * frame.cols << std::endl;
+            std::cout << "mat channels: " << frame.channels() << std::endl;
+            std::cout << "vector size: " << encoded.size() << std::endl;
+        }
     }
     return 0;
 }
-/*
-#include <opencv2/opencv.hpp>
-#include <highgui.h>
-
-extern "C" {
-#include "libswscale/swscale.h"
-#include "libavcodec/avcodec.h"
-#include "libavformat/avformat.h"
-
-}
-AVFrame cvmat_to_avframe(cv::Mat* frame)
-{
-
-    AVFrame dst;
-    cv::Size frameSize = frame->size();
-    AVCodec *encoder = avcodec_find_encoder(AV_CODEC_ID_RAWVIDEO);
-    AVFormatContext* outContainer = avformat_alloc_context();
-    AVStream *outStream = avformat_new_stream(outContainer, encoder);
-    avcodec_get_context_defaults3(outStream->codec, encoder);
-
-    outStream->codec->pix_fmt = AV_PIX_FMT_BGR24;
-    outStream->codec->width = frame->cols;
-    outStream->codec->height = frame->rows;
-    avpicture_fill((AVPicture*)&dst, frame->data, AV_PIX_FMT_BGR24, outStream->codec->width, outStream->codec->height);
-    dst.width = frameSize.width;
-    dst.height = frameSize.height;
-
-    return dst;
-}
-
-
-cv::Mat avframe_to_cvmat(AVFrame *frame)
-{
-    AVFrame dst;
-    cv::Mat m;
-
-    memset(&dst, 0, sizeof(dst));
-
-    int w = frame->width, h = frame->height;
-    m = cv::Mat(h, w, CV_8UC3);
-    dst.data[0] = (uint8_t *)m.data;
-    avpicture_fill( (AVPicture *)&dst, dst.data[0], AV_PIX_FMT_BGR24, w, h);
-
-    struct SwsContext *convert_ctx=NULL;
-    enum AVPixelFormat src_pixfmt = AV_PIX_FMT_BGR24;
-    enum AVPixelFormat dst_pixfmt = AV_PIX_FMT_BGR24;
-    convert_ctx = sws_getContext(w, h, src_pixfmt, w, h, dst_pixfmt,
-                                 SWS_FAST_BILINEAR, NULL, NULL, NULL);
-
-    sws_scale(convert_ctx, frame->data, frame->linesize, 0, h,
-              dst.data, dst.linesize);
-    sws_freeContext(convert_ctx);
-
-    return m;
-}
-
-int main() {
-    cv::VideoCapture cap(0);
-    cap.set(CV_CAP_PROP_FOURCC, CV_FOURCC('H', '2', '6', '4'));
-
-    if (!cap.open(0)) {
-        return 1;
-    }
-
-    while (true) {
-        cv::Mat frame;
-
-        cap >> frame;
-
-        imshow("client-cam", frame);
-
-        if (cv::waitKey(10) == 27 )
-            break;
-    }
-
-
-}
-
-*/

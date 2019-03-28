@@ -24,18 +24,14 @@ void base_server::on_close(connection_hdl hdl) {
 
 void base_server::on_message(connection_hdl hdl, server::message_ptr msg) {
     if (msg->get_opcode() == websocketpp::frame::opcode::binary) {
+       cv::Mat rawData = cv::Mat(1, msg->get_payload().size(), CV_8UC1, (char*)msg->get_payload().data());
+       cv::Mat frame = imdecode(rawData, CV_LOAD_IMAGE_COLOR);
 
-       cv::Mat img = cv::Mat::zeros(480, 640, CV_8UC3);
-       int imgSize = 921600;
-       uchar *iptr = img.data;
-
-       if (!img.isContinuous()) {
-           img = img.clone();
+       if (!frame.isContinuous()) {
+            frame = frame.clone();
        }
-
-       memcpy(iptr, msg->get_payload().data(), imgSize);
-       std::cout << "received " << imgSize << " bytes from client." << std::endl;
-       cv::imshow("server-cam", img);
+       std::cout << "received " << msg->get_payload().size() << " bytes from client." << std::endl;
+       cv::imshow("server-cam", frame);
        cv::waitKey(10);
     }
 }
