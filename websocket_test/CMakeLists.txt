@@ -14,8 +14,8 @@ find_package( OpenCV REQUIRED )
 include_directories(${PROJECT_SOURCE_DIR})
 
 
-add_executable(websocket_server main.cpp server_src/base_server.cpp server_src/base_server.h)
-target_link_libraries(websocket_server  ${Boost_LIBRARIES} ${OpenCV_LIBS} -pthread)
+add_executable(websocket_server main.cpp server_src/base_server.cpp server_src/base_server.h server_src/AV_ecoder.cpp server_src/AV_ecoder.h)
+target_link_libraries(websocket_server  ${Boost_LIBRARIES} ${OpenCV_LIBS} -pthread  -lavformat -lavcodec -lavdevice -lavutil -lswscale )
 add_executable(websocket_client client.cpp client_src/websocket_endpoint.cpp client_src/connection_metadata.cpp)
-target_link_libraries(websocket_client  ${Boost_LIBRARIES} ${OpenCV_LIBS} -pthread)
+target_link_libraries(websocket_client  ${Boost_LIBRARIES} ${OpenCV_LIBS} -pthread -lavformat -lavcodec -lavdevice -lavutil -lswscale )
 
