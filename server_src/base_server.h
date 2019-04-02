@@ -8,6 +8,7 @@
 #include <websocketpp/config/asio_no_tls.hpp>
 #include <websocketpp/server.hpp>
 #include <opencv2/opencv.hpp>
+#include <h.264codec/x264decoder.h>
 
 typedef websocketpp::server<websocketpp::config::asio> server;
 
@@ -28,9 +29,9 @@ public:
     bool on_validate(connection_hdl hdl);
 
 private:
+    x264Decoder x264_decoder;
     server m_server;
     bool is_connected;
-    cv::Mat master_frame;
     int counter;
 
 };

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/server.cpp" description="&#10;#include &lt;server_src/base_server.h&gt;&#10;&#10;int main() {..." line="8" />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="websocket_test" targetName="websocket_client" />
-      <config projectName="websocket_test" targetName="websocket_server" />
+      <config projectName="websocket_test" targetName="server" />
+      <config projectName="websocket_test" targetName="client" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -13,12 +16,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="218155f7-1bce-4991-a295-7b124ec3c950" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/h.264codec/x264decoder.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h.264codec/x264decoder.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h.264codec/x264encoder.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h.264codec/x264encoder.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/client.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/websocket_client" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_src/tinylib.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_src/x264decoder.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_src/x264decoder.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_src/x264encoder.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_src/x264encoder.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/websocket_client" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/websocket_client" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/websocket_test.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/websocket_test.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_src/AV_ecoder.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_src/AV_ecoder.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server_src/base_server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server_src/base_server.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server_src/base_server.h" beforeDir="false" afterPath="$PROJECT_DIR$/server_src/base_server.h" afterDir="false" />
     </list>
@@ -29,16 +41,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client_src/x264encoder.h">
+        <entry file="file://$PROJECT_DIR$/h.264codec/x264encoder.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+            <state relative-caret-position="640">
+              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
               <folding>
-                <element signature="e#114#135#0" expanded="true" />
+                <element signature="e#126#145#0" expanded="true" />
+                <element signature="e#200#259#0" expanded="true" />
+                <element signature="e#281#298#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server_src/base_server.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+            <state relative-caret-position="490">
+              <caret line="34" column="16" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
               <folding>
                 <element signature="e#114#159#0" expanded="true" />
               </folding>
@@ -57,11 +73,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server_src/base_server.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-823">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="378">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
               <folding>
+                <element signature="e#39#63#0" expanded="true" />
                 <element signature="e#148#176#0" expanded="true" />
               </folding>
             </state>
@@ -69,44 +95,53 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h.264codec/x264encoder.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="604" column="3" selection-start-line="604" selection-start-column="3" selection-end-line="604" selection-end-column="3" />
+            <state relative-caret-position="64">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
               <folding>
-                <element signature="e#15718#15747#0" expanded="true" />
-                <element signature="e#16539#16572#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client_src/x264encoder.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="120" column="4" selection-start-line="120" selection-start-column="4" selection-end-line="120" selection-end-column="4" />
-              <folding>
-                <element signature="e#38#62#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client_src/x264decoder.cpp">
+        <entry file="file://$PROJECT_DIR$/h.264codec/x264decoder.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="2" column="19" selection-end-line="192" />
+            <state relative-caret-position="764">
+              <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client_src/x264decoder.h">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+            <state relative-caret-position="336">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h.264codec/x264decoder.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="530">
+              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+              <folding>
+                <element signature="e#211#230#0" expanded="true" />
+                <element signature="e#284#301#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,21 +164,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server_src/base_server.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/client_src/x264encoder.h" />
-        <option value="$PROJECT_DIR$/client_src/x264decoder.cpp" />
         <option value="$PROJECT_DIR$/client_src/x264decoder.h" />
+        <option value="$PROJECT_DIR$/client_src/x264encoder.h" />
+        <option value="$PROJECT_DIR$/client_src/x264encoder.cpp" />
+        <option value="$PROJECT_DIR$/client_src/x264decoder.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/server_src/base_server.cpp" />
         <option value="$PROJECT_DIR$/client.cpp" />
-        <option value="$PROJECT_DIR$/client_src/x264encoder.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/server_src/base_server.h" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="391" />
-    <option name="y" value="80" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="187" />
+    <option name="y" value="31" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -157,17 +192,7 @@
           <expand>
             <path>
               <item name="websocket_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="websocket_opencv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="websocket_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="websocket_opencv" type="462c0819:PsiDirectoryNode" />
-              <item name="client_src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="websocket_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="websocket_opencv" type="462c0819:PsiDirectoryNode" />
-              <item name="server_src" type="462c0819:PsiDirectoryNode" />
+              <item name="webs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -177,7 +202,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/h.264codec" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -191,20 +222,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.websocket_client">
+  <component name="RunManager" selected="CMake Application.websocket_client">
+    <configuration name="client" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="websocket_test" TARGET_NAME="client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="websocket_test" RUN_TARGET_NAME="client">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="websocket_test" TARGET_NAME="server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="websocket_test" RUN_TARGET_NAME="server">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="websocket_client" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="/dev/video0 ws://localhost:9002 20" PASS_PARENT_ENVS_2="true" PROJECT_NAME="websocket_test" TARGET_NAME="websocket_client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="websocket_test" RUN_TARGET_NAME="websocket_client">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="websocket_server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="websocket_test" TARGET_NAME="websocket_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="websocket_test" RUN_TARGET_NAME="websocket_server">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.websocket_client" />
-      <item itemvalue="Application.websocket_server" />
+      <item itemvalue="CMake Application.websocket_client" />
+      <item itemvalue="CMake Application.client" />
+      <item itemvalue="CMake Application.server" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -220,32 +257,32 @@
       <workItem from="1554108079278" duration="21477000" />
       <workItem from="1554192168476" duration="11862000" />
       <workItem from="1554204205210" duration="7075000" />
+      <workItem from="1554231513880" duration="12868000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40414000" />
+    <option name="totallyTimeSpent" value="53282000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="45" y="25" width="1875" height="1055" extended-state="6" />
-    <editor active="true" />
+    <frame x="187" y="31" width="1400" height="1000" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14434117" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20236337" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3099352" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3097143" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32937366" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32914287" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="CMake" order="12" />
+      <window_info anchor="bottom" id="CMake" order="12" visible="true" weight="0.32876712" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -256,39 +293,9 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/include/x86_64-linux-gnu/libavformat/avformat.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="2213" column="4" selection-start-line="2213" selection-start-column="4" selection-end-line="2213" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client_src/connection_metadata.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/x86_64-linux-gnu/libavformat/avformat.h" />
     <entry file="file://$PROJECT_DIR$/server_src/AV_ecoder.h" />
     <entry file="file://$PROJECT_DIR$/server_src/AV_ecoder.cpp" />
-    <entry file="file://$PROJECT_DIR$/client_src/websocket_endpoint.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="140" selection-start-line="19" selection-start-column="140" selection-end-line="19" selection-end-column="140" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/x264.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13425">
@@ -296,67 +303,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client_src/x264decoder.cpp">
+    <entry file="file:///usr/include/libavcodec/avcodec.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="19" selection-end-line="192" />
+        <state relative-caret-position="667">
+          <caret line="4260" column="4" selection-start-line="4260" selection-start-column="4" selection-end-line="4260" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client_src/x264decoder.h">
+    <entry file="file://$PROJECT_DIR$/client_src/connection_metadata.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        <state relative-caret-position="-471" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client_src/websocket_endpoint.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-592">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h.264codec/x264encoder.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+          <folding>
+            <element signature="e#126#145#0" expanded="true" />
+            <element signature="e#200#259#0" expanded="true" />
+            <element signature="e#281#298#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server_src/base_server.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        <state relative-caret-position="490">
+          <caret line="34" column="16" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
           <folding>
             <element signature="e#114#159#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h.264codec/x264decoder.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+          <folding>
+            <element signature="e#211#230#0" expanded="true" />
+            <element signature="e#284#301#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h.264codec/x264decoder.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="764">
+          <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h.264codec/x264encoder.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server_src/base_server.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-823">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="378">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           <folding>
+            <element signature="e#39#63#0" expanded="true" />
             <element signature="e#148#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="604" column="3" selection-start-line="604" selection-start-column="3" selection-end-line="604" selection-end-column="3" />
-          <folding>
-            <element signature="e#15718#15747#0" expanded="true" />
-            <element signature="e#16539#16572#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client_src/x264encoder.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-          <folding>
-            <element signature="e#114#135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client_src/x264encoder.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="120" column="4" selection-start-line="120" selection-start-column="4" selection-end-line="120" selection-end-column="4" />
-          <folding>
-            <element signature="e#38#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
