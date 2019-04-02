@@ -17,6 +17,7 @@ extern "C" {
 }
 
 
+
 AVFrame cvmat_to_avframe(cv::Mat* frame)
 {
 
@@ -64,12 +65,17 @@ cv::Mat avframe_to_cvmat(AVFrame *frame)
 }
 
 
-base_server::base_server() : is_connected(false) {
+base_server::base_server() : is_connected(false), counter(0) {
     m_server.init_asio();
     m_server.set_open_handler(bind(&base_server::on_open,this,::_1));
     m_server.set_close_handler(bind(&base_server::on_close,this,::_1));
     m_server.set_validate_handler(bind(&base_server::on_validate,this,::_1));
     m_server.set_message_handler(bind(&base_server::on_message,this, ::_1,::_2));
+
+
+
+
+
 }
 
 void base_server::on_open(connection_hdl hdl) {
@@ -80,26 +86,34 @@ void base_server::on_close(connection_hdl hdl) {
     is_connected = false;
 }
 
+void overlayImage(const cv::Mat &background, const cv::Mat &foreground, cv::Mat &output, cv::Point2i location, double opacity = 1.0)
+{
+}
+
+
+
+
 void base_server::on_message(connection_hdl hdl, server::message_ptr msg) {
-    if (msg->get_opcode() == websocketpp::frame::opcode::binary) {
+    /*if (msg->get_opcode() == websocketpp::frame::opcode::binary) {
         cv::Mat cv_frame = avframe_to_cvmat((AVFrame *)msg->get_payload().data());
         cv::imshow("server", cv_frame);
         cv::waitKey(10);
-    }
+    }*/
 
 
-    /*if (msg->get_opcode() == websocketpp::frame::opcode::binary) {
-       cv::Mat rawData = cv::Mat(1, msg->get_payload().size(), CV_8UC1, (char*)msg->get_payload().data());
+    if (msg->get_opcode() == websocketpp::frame::opcode::binary) {
+
+        AVPacket *p = (AVPacket *)msg->get_payload().data();
+        std::cout << p->size << std::endl;
+
+      // std::string base64_decode = websocketpp::base64_decode(msg->get_payload());
+       /*cv::Mat rawData = cv::Mat(1, msg->get_payload().size(), CV_8UC1, (char*)msg->get_payload().data());
        cv::Mat frame = imdecode(rawData, CV_LOAD_IMAGE_COLOR);
 
-       if (!frame.isContinuous()) {
-            frame = frame.clone();
-       }
-
        std::cout << "received " << msg->get_payload().size() << " bytes from client." << std::endl;
-       cv::imshow("server-cam", frame);
-       cv::waitKey(10);
-    }*/
+       cv::imshow("server-cam", frame );
+       cv::waitKey(10);*/
+    }
 }
 
 bool base_server::on_validate(connection_hdl hdl) {

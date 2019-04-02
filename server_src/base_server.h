@@ -7,6 +7,7 @@
 
 #include <websocketpp/config/asio_no_tls.hpp>
 #include <websocketpp/server.hpp>
+#include <opencv2/opencv.hpp>
 
 typedef websocketpp::server<websocketpp::config::asio> server;
 
@@ -29,6 +30,8 @@ public:
 private:
     server m_server;
     bool is_connected;
+    cv::Mat master_frame;
+    int counter;
 
 };
 

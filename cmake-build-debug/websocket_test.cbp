@@ -4,192 +4,194 @@
 	<Project>
 		<Option title="websocket_test"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="clang"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\share\;CMake Files\..\..\..\..\..\usr\share\OpenCV\;"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\share\;CMake Files\..\..\..\..\usr\share\OpenCV\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/roda/Code/websocketpp/websocket_test/cmake-build-debug"/>
+				<Option working_dir="/home/jin/Code/websocket_opencv/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/roda/Code/websocketpp/websocket_test/cmake-build-debug"/>
+				<Option working_dir="/home/jin/Code/websocket_opencv/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="websocket_server">
-				<Option output="/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/websocket_server" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/roda/Code/websocketpp/websocket_test/cmake-build-debug"/>
+				<Option output="/home/jin/Code/websocket_opencv/cmake-build-debug/websocket_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jin/Code/websocket_opencv/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="clang"/>
+				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/roda/Code/websocketpp/websocket_test/websocketpp"/>
-					<Add directory="/home/roda/Code/websocketpp/websocket_test"/>
+					<Add directory="/home/jin/Code/websocket_opencv/websocketpp"/>
+					<Add directory="/home/jin/Code/websocket_opencv"/>
 					<Add directory="/usr/include/opencv"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/x86_64-linux-gnu/c++/7.3.0"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0/backward"/>
-					<Add directory="/usr/include/clang/6.0.0/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 websocket_server"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 websocket_server"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="websocket_server/fast">
-				<Option output="/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/websocket_server" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/roda/Code/websocketpp/websocket_test/cmake-build-debug"/>
+				<Option output="/home/jin/Code/websocket_opencv/cmake-build-debug/websocket_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jin/Code/websocket_opencv/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="clang"/>
+				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/roda/Code/websocketpp/websocket_test/websocketpp"/>
-					<Add directory="/home/roda/Code/websocketpp/websocket_test"/>
+					<Add directory="/home/jin/Code/websocket_opencv/websocketpp"/>
+					<Add directory="/home/jin/Code/websocket_opencv"/>
 					<Add directory="/usr/include/opencv"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/x86_64-linux-gnu/c++/7.3.0"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0/backward"/>
-					<Add directory="/usr/include/clang/6.0.0/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 websocket_server/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 websocket_server/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/roda/Code/websocketpp/websocket_test/cmake-build-debug"/>
+				<Option working_dir="/home/jin/Code/websocket_opencv/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="websocket_client">
-				<Option output="/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/websocket_client" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/roda/Code/websocketpp/websocket_test/cmake-build-debug"/>
+				<Option output="/home/jin/Code/websocket_opencv/cmake-build-debug/websocket_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jin/Code/websocket_opencv/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="clang"/>
+				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/roda/Code/websocketpp/websocket_test/websocketpp"/>
-					<Add directory="/home/roda/Code/websocketpp/websocket_test"/>
+					<Add directory="/home/jin/Code/websocket_opencv/websocketpp"/>
+					<Add directory="/home/jin/Code/websocket_opencv"/>
 					<Add directory="/usr/include/opencv"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/x86_64-linux-gnu/c++/7.3.0"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0/backward"/>
-					<Add directory="/usr/include/clang/6.0.0/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 websocket_client"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 websocket_client"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="websocket_client/fast">
-				<Option output="/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/websocket_client" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/roda/Code/websocketpp/websocket_test/cmake-build-debug"/>
+				<Option output="/home/jin/Code/websocket_opencv/cmake-build-debug/websocket_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jin/Code/websocket_opencv/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="clang"/>
+				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/roda/Code/websocketpp/websocket_test/websocketpp"/>
-					<Add directory="/home/roda/Code/websocketpp/websocket_test"/>
+					<Add directory="/home/jin/Code/websocket_opencv/websocketpp"/>
+					<Add directory="/home/jin/Code/websocket_opencv"/>
 					<Add directory="/usr/include/opencv"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/x86_64-linux-gnu/c++/7.3.0"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0/backward"/>
-					<Add directory="/usr/include/clang/6.0.0/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 websocket_client/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/home/roda/Code/websocketpp/websocket_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 websocket_client/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/client.cpp">
+		<Unit filename="/home/jin/Code/websocket_opencv/client.cpp">
 			<Option target="websocket_client"/>
 		</Unit>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/client_src/connection_metadata.cpp">
+		<Unit filename="/home/jin/Code/websocket_opencv/client_src/connection_metadata.cpp">
 			<Option target="websocket_client"/>
 		</Unit>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/client_src/connection_metadata.h">
+		<Unit filename="/home/jin/Code/websocket_opencv/client_src/connection_metadata.h">
 			<Option target="websocket_client"/>
 		</Unit>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/client_src/websocket_endpoint.cpp">
+		<Unit filename="/home/jin/Code/websocket_opencv/client_src/websocket_endpoint.cpp">
 			<Option target="websocket_client"/>
 		</Unit>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/client_src/websocket_endpoint.h">
+		<Unit filename="/home/jin/Code/websocket_opencv/client_src/websocket_endpoint.h">
 			<Option target="websocket_client"/>
 		</Unit>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/main.cpp">
+		<Unit filename="/home/jin/Code/websocket_opencv/client_src/x264decoder.cpp">
+			<Option target="websocket_client"/>
+		</Unit>
+		<Unit filename="/home/jin/Code/websocket_opencv/client_src/x264decoder.h">
+			<Option target="websocket_client"/>
+		</Unit>
+		<Unit filename="/home/jin/Code/websocket_opencv/client_src/x264encoder.cpp">
+			<Option target="websocket_client"/>
+		</Unit>
+		<Unit filename="/home/jin/Code/websocket_opencv/client_src/x264encoder.h">
+			<Option target="websocket_client"/>
+		</Unit>
+		<Unit filename="/home/jin/Code/websocket_opencv/main.cpp">
 			<Option target="websocket_server"/>
 		</Unit>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/server_src/AV_ecoder.cpp">
+		<Unit filename="/home/jin/Code/websocket_opencv/server_src/base_server.cpp">
 			<Option target="websocket_server"/>
 		</Unit>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/server_src/AV_ecoder.h">
+		<Unit filename="/home/jin/Code/websocket_opencv/server_src/base_server.h">
 			<Option target="websocket_server"/>
 		</Unit>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/server_src/base_server.cpp">
-			<Option target="websocket_server"/>
-		</Unit>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/server_src/base_server.h">
-			<Option target="websocket_server"/>
-		</Unit>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/CMakeLists.txt">
+		<Unit filename="/home/jin/Code/websocket_opencv/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/../../../../../usr/share/OpenCV/OpenCVConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\OpenCV\"/>
+		<Unit filename="/home/jin/Code/websocket_opencv/../../../../usr/share/OpenCV/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
 		</Unit>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/../../../../../usr/share/OpenCV/OpenCVConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\OpenCV\"/>
+		<Unit filename="/home/jin/Code/websocket_opencv/../../../../usr/share/OpenCV/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
 		</Unit>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/../../../../../usr/share/OpenCV/OpenCVModules-release.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\OpenCV\"/>
+		<Unit filename="/home/jin/Code/websocket_opencv/../../../../usr/share/OpenCV/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
 		</Unit>
-		<Unit filename="/home/roda/Code/websocketpp/websocket_test/../../../../../usr/share/OpenCV/OpenCVModules.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\OpenCV\"/>
+		<Unit filename="/home/jin/Code/websocket_opencv/../../../../usr/share/OpenCV/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
