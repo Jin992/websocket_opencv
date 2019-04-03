@@ -25,6 +25,7 @@ INSTALL.*
 ZERO_CHECK.*
 CMakeCache.txt
 install_manifest.txt
+cmake-build-debug/
 
 # Windows/Visual Studio
 *.vcproj*

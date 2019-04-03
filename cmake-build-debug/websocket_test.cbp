@@ -171,6 +171,12 @@
 		<Unit filename="/home/jin/Code/websocket_opencv/h.264codec/x264encoder.h">
 			<Option target="client"/>
 		</Unit>
+		<Unit filename="/home/jin/Code/websocket_opencv/opencv_modules/ImgStabilizer.cpp">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/jin/Code/websocket_opencv/opencv_modules/ImgStabilizer.h">
+			<Option target="client"/>
+		</Unit>
 		<Unit filename="/home/jin/Code/websocket_opencv/server.cpp">
 			<Option target="server"/>
 		</Unit>
