@@ -5,191 +5,195 @@
 		<Option title="websocket_test"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\usr\lib64\cmake\opencv4\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\share\;CMake Files\..\..\..\..\usr\share\OpenCV\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/jin/Code/webs/cmake-build-debug"/>
+				<Option working_dir="/home/jin/Code/websocket_opencv/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/jin/Code/webs/cmake-build-debug"/>
+				<Option working_dir="/home/jin/Code/websocket_opencv/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/jin/Code/webs/cmake-build-debug"/>
+				<Option working_dir="/home/jin/Code/websocket_opencv/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="server">
-				<Option output="/home/jin/Code/webs/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jin/Code/webs/cmake-build-debug"/>
+				<Option output="/home/jin/Code/websocket_opencv/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jin/Code/websocket_opencv/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/jin/Code/webs/websocketpp"/>
-					<Add directory="/home/jin/Code/webs"/>
-					<Add directory="/usr/include/opencv4"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include"/>
+					<Add directory="/home/jin/Code/websocket_opencv/websocketpp"/>
+					<Add directory="/home/jin/Code/websocket_opencv"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 server"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 server"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="server/fast">
-				<Option output="/home/jin/Code/webs/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jin/Code/webs/cmake-build-debug"/>
+				<Option output="/home/jin/Code/websocket_opencv/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jin/Code/websocket_opencv/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/jin/Code/webs/websocketpp"/>
-					<Add directory="/home/jin/Code/webs"/>
-					<Add directory="/usr/include/opencv4"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include"/>
+					<Add directory="/home/jin/Code/websocket_opencv/websocketpp"/>
+					<Add directory="/home/jin/Code/websocket_opencv"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 server/fast"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 server/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="client">
-				<Option output="/home/jin/Code/webs/cmake-build-debug/client" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jin/Code/webs/cmake-build-debug"/>
+				<Option output="/home/jin/Code/websocket_opencv/cmake-build-debug/client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jin/Code/websocket_opencv/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/jin/Code/webs/websocketpp"/>
-					<Add directory="/home/jin/Code/webs"/>
-					<Add directory="/usr/include/opencv4"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include"/>
+					<Add directory="/home/jin/Code/websocket_opencv/websocketpp"/>
+					<Add directory="/home/jin/Code/websocket_opencv"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 client"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 client"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="client/fast">
-				<Option output="/home/jin/Code/webs/cmake-build-debug/client" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jin/Code/webs/cmake-build-debug"/>
+				<Option output="/home/jin/Code/websocket_opencv/cmake-build-debug/client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jin/Code/websocket_opencv/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/jin/Code/webs/websocketpp"/>
-					<Add directory="/home/jin/Code/webs"/>
-					<Add directory="/usr/include/opencv4"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include"/>
+					<Add directory="/home/jin/Code/websocket_opencv/websocketpp"/>
+					<Add directory="/home/jin/Code/websocket_opencv"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 client/fast"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/jin/Code/webs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 client/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/jin/Code/websocket_opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/jin/Code/webs/client.cpp">
+		<Unit filename="/home/jin/Code/websocket_opencv/client.cpp">
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/client_src/connection_metadata.cpp">
+		<Unit filename="/home/jin/Code/websocket_opencv/client_src/connection_metadata.cpp">
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/client_src/connection_metadata.h">
+		<Unit filename="/home/jin/Code/websocket_opencv/client_src/connection_metadata.h">
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/client_src/websocket_endpoint.cpp">
+		<Unit filename="/home/jin/Code/websocket_opencv/client_src/websocket_endpoint.cpp">
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/client_src/websocket_endpoint.h">
+		<Unit filename="/home/jin/Code/websocket_opencv/client_src/websocket_endpoint.h">
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/h.264codec/x264decoder.cpp">
+		<Unit filename="/home/jin/Code/websocket_opencv/h.264codec/x264decoder.cpp">
 			<Option target="server"/>
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/h.264codec/x264decoder.h">
+		<Unit filename="/home/jin/Code/websocket_opencv/h.264codec/x264decoder.h">
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/h.264codec/x264encoder.cpp">
+		<Unit filename="/home/jin/Code/websocket_opencv/h.264codec/x264encoder.cpp">
 			<Option target="server"/>
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/h.264codec/x264encoder.h">
+		<Unit filename="/home/jin/Code/websocket_opencv/h.264codec/x264encoder.h">
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/server.cpp">
+		<Unit filename="/home/jin/Code/websocket_opencv/server.cpp">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/server_src/base_server.cpp">
+		<Unit filename="/home/jin/Code/websocket_opencv/server_src/base_server.cpp">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/server_src/base_server.h">
+		<Unit filename="/home/jin/Code/websocket_opencv/server_src/base_server.h">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/CMakeLists.txt">
+		<Unit filename="/home/jin/Code/websocket_opencv/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/../../../../usr/lib64/cmake/opencv4/OpenCVConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\opencv4\"/>
+		<Unit filename="/home/jin/Code/websocket_opencv/../../../../usr/share/OpenCV/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/../../../../usr/lib64/cmake/opencv4/OpenCVConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\opencv4\"/>
+		<Unit filename="/home/jin/Code/websocket_opencv/../../../../usr/share/OpenCV/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/../../../../usr/lib64/cmake/opencv4/OpenCVModules-release.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\opencv4\"/>
+		<Unit filename="/home/jin/Code/websocket_opencv/../../../../usr/share/OpenCV/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
 		</Unit>
-		<Unit filename="/home/jin/Code/webs/../../../../usr/lib64/cmake/opencv4/OpenCVModules.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\opencv4\"/>
+		<Unit filename="/home/jin/Code/websocket_opencv/../../../../usr/share/OpenCV/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

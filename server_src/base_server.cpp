@@ -41,15 +41,29 @@ void base_server::on_close(connection_hdl hdl) {
 }
 
 void base_server::on_message(connection_hdl hdl, server::message_ptr msg) {
-
+    static double fps = 0;
     if (msg->get_opcode() == websocketpp::frame::opcode::binary) {
         DataPacked data;
         char *bgr_buffer = new char[640*480*3];
 
         x264_decoder.decodeFrame(&(((DataPacked *)msg->get_payload().data())->data_[0]),
                 ((DataPacked *)msg->get_payload().data())->color_size_, bgr_buffer);
-        std::cout << "received " << data.color_size_ << std::endl;
+
+        //std::cout << "received " << ((DataPacked *)msg->get_payload().data())->color_size_ << std::endl;
         cv::Mat frame(480, 640, CV_8UC3, bgr_buffer);
+        if (counter == 25) {
+            //std::cout << "[25 frames] == " << size_of_25 << std::endl;
+            fps = size_of_25;
+            counter = 0;
+            size_of_25 = 0;
+        }
+        cv::putText(frame, std::string("25 fps [") + std::to_string(static_cast<int>(fps)) + std::string("] bytes."), cvPoint(30,30),
+                    cv::QT_FONT_NORMAL, 0.5, cvScalar(0,255,0), 1, CV_AA);
+        cv::putText(frame, std::string("Bandwidth consumption ") +
+                           std::to_string(fps/ 1024 / 1024 * 8 ) + std::string(" Mbit/s"), cvPoint(30,45),
+                    cv::QT_FONT_NORMAL, 0.5, cvScalar(0,255,0), 1, CV_AA);
+        size_of_25 += ((DataPacked *)msg->get_payload().data())->color_size_;
+        counter++;
         cv::imshow("server frame", frame);
         cv::waitKey(10);
         delete [] bgr_buffer;

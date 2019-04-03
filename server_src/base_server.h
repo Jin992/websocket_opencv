@@ -33,7 +33,7 @@ private:
     server m_server;
     bool is_connected;
     int counter;
-
+    int size_of_25;
 };
 
 #endif //WEBSOCKET_TEST_BASE_SERVER_H
